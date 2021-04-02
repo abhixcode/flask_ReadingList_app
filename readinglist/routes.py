@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
-from flaskblog.readinglist.forms import ListForm
-from flaskblog.models import User, Readinglist, Booklist
-from flaskblog import create_app,db, bcrypt
+from flask_ReadingList_app.readinglist.forms import ListForm
+from flask_ReadingList_app.models import User, Readinglist, Booklist
+from flask_ReadingList_app import create_app,db, bcrypt
 from flask_login import login_user, current_user, logout_user, login_required
 
 readinglist = Blueprint('readinglist', __name__)

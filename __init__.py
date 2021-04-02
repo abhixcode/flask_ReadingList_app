@@ -2,7 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
-from flaskblog.config import Config
+#from flaskblog.config import Config
+from flask_ReadingList_app.config import Config
 
 
 
@@ -19,10 +20,10 @@ def create_app():
 	db.init_app(app)
 	bcrypt.init_app(app)
 	login_manager.init_app(app)
-	from flaskblog.users.routes import users
-	from flaskblog.readinglist.routes import readinglist
-	from flaskblog.main.routes import main
-	from flaskblog.errors.handlers import errors
+	from flask_ReadingList_app.users.routes import users
+	from flask_ReadingList_app.readinglist.routes import readinglist
+	from flask_ReadingList_app.main.routes import main
+	from flask_ReadingList_app.errors.handlers import errors
 	app.register_blueprint(users)
 	app.register_blueprint(readinglist)
 	app.register_blueprint(main)

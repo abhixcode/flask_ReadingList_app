@@ -1,4 +1,4 @@
-from flaskblog import db, login_manager, create_app
+from flask_ReadingList_app import db, login_manager, create_app
 from flask_login import UserMixin
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask import current_app
