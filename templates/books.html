@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="mb-3">Reading Lists for Ropan</h1>
+    {% for alist in readinglist %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{{ url_for('readinglist.alist', list_id=1) }}">{{ alist }}</a>
+            </div>
+            <h2> <a class="mr-2">{{ alist }}</a>
+             </h2>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
